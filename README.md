@@ -70,12 +70,19 @@ This approach extracted insights from the data without requiring predictive mode
 Key results and insights from the analysis included:
 
 -  Movies in the Adventure, Animation, and Action genres had the highest average gross revenues, with each exceeding $950 million.
+
+![Alt Genre vs Gross](https://github.com/earlcr/Microsoft-Movie-Analysis/blob/template-mvp/images/average_gross_revenue_by_genre.png)
+
 -  On average, movies in a franchise earned over $800 million more than non-franchise films.
+
+![Alt Franchise](https://github.com/earlcr/Microsoft-Movie-Analysis/blob/template-mvp/images/average_gross_revenue_for_movies_in_and_not_in_franchises.png)
+
 -  Movies with user ratings exceeding 7.5 and votes over 100,000 associated strongly with high box office gross revenue above $500 million.
 -  The Sweetspot for high box office success was ratings between 7.5-8.5 and votes greater than 250,000.
 
-These insights provide Microsoft with a data-backed investment thesis for maximizing returns. Limitations include incomplete revenue data and rapidly changing industry conditions affecting generalizability.
+![Alt rating/votes](https://github.com/earlcr/Microsoft-Movie-Analysis/blob/template-mvp/images/relationship_between_ratings_votes_and_gross_revenue.png)
 
+These insights provide Microsoft with a data-backed investment thesis for maximizing returns. Limitations include incomplete revenue data and rapidly changing industry conditions affecting generalizability.
 
 
 ## Conclusions
