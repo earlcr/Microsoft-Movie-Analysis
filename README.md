@@ -1,3 +1,4 @@
+![Alt Microsoft Logo](https://github.com/earlcr/Microsoft-Movie-Analysis/blob/template-mvp/images/microsoft%20logo.jpg)
 # Microsoft Movie Investment Analysis
 
 **Author**: Earl Chirchir
