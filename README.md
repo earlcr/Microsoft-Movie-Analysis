@@ -4,26 +4,34 @@
 
 ## Overview
 
-This project conducts an in-depth analysis of historical box office data to uncover patterns linking movie genres, ratings, votes, and revenues. The goal is providing Microsoft actionable insights as it enters the movie industry, guiding data-driven investments for maximizing financial returns. The analysis utilizes descriptive statistics and visualizations to reveal adventure, animation, action, franchises, and quality ratings strongly correlate with box office success.
+This project conducts an in-depth analysis of historical box office data to uncover patterns linking movie genres, ratings, votes, and revenues. The goal is providing Microsoft actionable insights as it enters the movie industry, guiding data-driven investments for maximizing financial returns. The analysis utilizes descriptive statistics and visualizations to reveal genres, franchises, and quality ratings strongly correlate with box office success.
 
 ## Business Problem
 
-As Microsoft launches its movie studio, data-driven analytics are required to inform multimillion-dollar investment decisions across projects and genres. Specifically, the analysis aims to answer:
+As Microsoft launches its new movie studio, the business needs to make smart investments in film projects that will resonate with audiences and generate strong box office revenues. However, as a new entrant to the movie industry, Microsoft currently lacks insights into what specific movie attributes and strategies correlate with financial success.
 
--  Which specific genres have consistently generated the highest average domestic and international gross revenues?
--  How do user ratings on sites like IMDb correlate with overall financial performance for different movie genres?
--  How many user votes on rating sites associate with box office success for different genres?
--  Can these detailed genre insights guide Microsoft's project selection for the highest probability of box office success?
+This analysis aims to uncover patterns in historical movie data that can inform Microsoft's investment decisions when selecting movie ideas, setting budgets, and allocating marketing resources. Focusing on proven formulas and genres for success can help mitigate the inherent risk in film production and marketing.
+
+Specific business questions this analysis aims to answer:
+
+-  What film genres, based on historical data, have consistently delivered the highest box office revenues? This will help guide genre selection.
+-  Do sequels and franchise films reliably outperform non-sequel movies in terms of gross sales? This will inform franchise strategy.
+-  How do factors like ratings and number of user votes correlate with overall box office performance? This will shape marketing tactics.
+-  What production budgets and marketing spends have been associated with highly profitable movies? This will set spending guardrails.
+
+These questions are critical for Microsoft Studios to ensure its multimillion dollar movie investments are allocated to projects with the highest revenue potential. By leveraging data-driven insights into the key drivers of box office success, Microsoft can refine its strategy across content selection, franchises, marketing, and budgets.
 
 The goal is leveraging patterns linking genres to revenues to optimize Microsoft's genre selection strategy. This will maximize return on investment as the studio enters the industry.
 
 ## Data
 
-The data includes three key datasets:
+The analysis uses three datasets:
 
--  Movie box office gross revenue data for over 7,000 films, including variables like title, studio, domestic gross, and foreign gross.
--  Movie metadata for over half a million titles, including original title, runtime, and genres.
--  Movie ratings data with variables like average rating and number of votes.
+-  **bom.movie_gross.csv** - Contains box office revenue data for over 7,000 movies. Key variables are 'title', 'studio', 'domestic_gross', and 'foreign_gross'.
+-  **title.basics.csv** - Provides movie metadata like 'original_title', 'runtime_minutes', and 'genres' for over half a million titles.
+-  **title.ratings.csv** - Includes audience ratings data with variables like 'averagerating' and 'numvotes'.
+
+The target variable is the total box office gross revenue, calculated by summing 'domestic_gross' and 'foreign_gross'.
 
 Key preparation steps included:
 
