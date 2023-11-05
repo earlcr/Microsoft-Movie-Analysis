@@ -86,9 +86,9 @@ The analysis provides a template for continually leveraging data to guide Micros
 Description of the structure of the repository and its contents:
 
 ```
-├── README.md                           <- The top-level README for reviewers of this project
-├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf         <- PDF version of project presentation
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+├── README.md                                   <- The top-level README for reviewers of this project
+├── microsoft_movie_investment_analysis.ipynb   <- Narrative documentation of analysis in Jupyter notebook
+├── microsoft_movie_investment_presentation.pdf <- PDF version of project presentation
+├── zippedData                                  <- Both sourced externally and generated from code
+└── images                                      <- Both sourced externally and generated from code
 ```
