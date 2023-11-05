@@ -1,72 +1,95 @@
-# Phase 1 Project Template - Minimum Viable Product (MVP)
+# Microsoft Movie Investment Analysis
 
-![blueprint](images/blueprint.png)
+**Author**: Earl Chirchir
 
-This repository is like a blueprint, providing structure for your first End of Phase Project. We suggest you base your Phase 1 project off of this repository so you can focus less on formatting and organization, and more on the _analysis and communication skills_ that will support your progress through the course. This template is designed to make your project portfolio-ready in order to impress the future employers who will review it. 
+## Overview
 
-## Repository Contents
+This project conducts an in-depth analysis of movie data from IMDb to uncover insights into which genres of films are most successful. Success is measured by examining domestic gross revenue, foreign gross revenue, average user ratings, and number of user votes for each movie in the dataset.
 
-Below is a list of the contents of this repository - instructions for using them are in the next section.
+The analysis aims to identify key patterns and relationships between movie genres and success metrics that can inform Microsoft's genre selection for their new movie studio. The goal is to leverage data-driven insights to maximize the revenue potential and profitability of Microsoft's upcoming slate of films.
 
-- `README.md`: The README for this repo branch explaining it's contents - you're reading it now
-- `TEMPLATE_README.md`: An example of a project README that provides a brief overview of your whole project
-- `dsc-phase1-project-template.ipynb`: A starter Jupyter Notebook with headings, code examples and guiding questions
-- `DS_Project_Presentation_Template.pdf`: A starter slide deck presenting your project - here is an [editable version](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy)
-- `zippedData` folder: A folder for the data you reference with your code
-- `images` folder: A folder for the images you reference in your files 
-- `.gitignore`: A hidden file that tells git to not track certain files and folders
+The key findings indicate that movies containing the genres Adventure, Action, and Sci-Fi consistently rank among the top for both domestic and foreign box office sales. Movies with the Adventure, Animation, and Comedy genre combination also perform well. Overall, the analysis suggests that Adventure is a crucial component across most high grossing genre combinations.
 
-## Instructions For Using This Repository
+### Repository Contents
 
-### Fork This Repository
+The repository contains the following:
 
-**For a group project**, have only one team member do these steps:
+-  imdb_data.ipynb - Jupyter notebook containing all data importing, preparation, exploratory analysis, visualization, and modeling code
+-  data/ - This folder contains the 3 raw CSV data files downloaded from IMDb
+-  images/ - All data visualization images, charts, and graphs generated from the analysis are saved here
+-  Movie_Genre_Analysis_Report.pdf - A formal final report synthesizing the key findings and recommendations
+-  README.md - The top level README providing an overview of the repository and project (this file)
 
-1. Fork this repository to your personal account
-   - In GitHub, go to this repository and click the "Fork" button in the upper right
-   
-2. Change the name of your fork of this repo to a _descriptive_ name of your choosing
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Options" -> "Repository Name" -> "Rename"
-   - Make the name descriptive, since potential employers will read it. Ex: "Microsoft-Movie-Analysis" is better than "Project-1"
+## Business Problem
 
-3. Use `git clone` to clone your fork of this repo to your local computer
+Microsoft seeks to optimize its movie investment decisions as it builds up its new studio. The company needs data-backed insights on which types of films have achieved blockbuster success historically.
 
-4. **For a group project**, add team members as collaborators to your fork of this repo
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Manage Access" -> "Invite Teams or People"
-   - Add your project team members as collaborators & send them the repo GitHub URL
+Key questions include:
 
-### Work In Your Fork Of This Repository
-
-- Work in the repo clone that you created on your local machine
-- Start writing and coding in the Jupyter Notebook `dsc-phase1-project-template.ipynb`
-- Fill in the README template in `TEMPLATE_README.md`
-- Use `git add`, `git commit`, and `git push` often to update your repo in GitHub
-   - For a refresher on how to do this and why it's important, review Topic 2: Bash and Git
-
-### Use The Slide Template
-
-1. Go to [this link](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy) to make an editable copy of the slide deck in your own Google Drive account
-2. Go to "Slide," select "Change Theme," and pick a theme you like so your presentation doesn't look like everyone else's
-3. **For a group project**, click the "Share" button and add your teammates as editors
-
-### Tidy Up Your Project
-
-- Change the file name of the Jupyter Notebook (`dsc-phase1-project-template.ipynb`) to something more descriptive
-- Save an appropriately-named PDF version of your slide deck to the repository
-- Rename the template readme you've been working in by running `git mv TEMPLATE_README.md README.md`
-- Delete unnecessary files from the repo using `git rm`
-   - The presentation PDF: `DS_Project_Presentation_Template.pdf`
-   - Any unused data files in the `zippedData` folder
-   - Any unused images in the `images` folder
-- Utilize the .gitignore file to ignore large unzipped data files in the `zippedData` folder
-   - Add `*.csv`,`*.tsv`, and `*.db` to the .gitignore file
-
-### Submit Your Project
-
-To submit your project, please follow the instructions in the "Project Submission & Review" page in the Milestones course.
+-  What genres have the highest revenue potential based on past box office performance?
+-  How do user ratings and number of votes correlate with financial outcomes?
+-  Can Microsoft use this knowledge to pick winning genres for its upcoming slate?
+- This analysis aims to uncover key patterns linking genres to box office results. These insights can guide Microsoft's multimillion dollar investments in its productions.
 
 ***
-### Notes
 
-- The visualizations in the notebook use best practices for visualization that you should try to emulate. For example, they have clear axes, descriptive titles, and appropriate number formatting
-- The `dsc-phase1-project-template.ipynb` is intended to be the _final version_ of your project. The first notebook you create will not look like this. You are encouraged to start with a very disorderly notebook and clean it as you go
+## Data
+
+The data comes from IMDb and The Numbers box office database. It includes:
+
+-  Movie metadata like title, genres, runtimes
+-  User ratings and number of votes
+-  Domestic and international box office gross revenue
+
+By combining data on genre, user engagement, and financials, the analysis can surface valuable insights.
+***
+
+## Methods
+
+The methodology focuses on:
+
+- Data import, cleaning, merging, and preparation
+- Calculating summary statistics like mean revenue for top genres
+- Data visualization using Matplotlib and Seaborn
+- Ranking genres by financial performance
+
+This descriptive analysis elucidates trends and relationships in the data. The findings directly inform the genre recommendations.
+
+## Results
+
+Key results show:
+
+- Adventure, Action, Sci-Fi is the top grossing genre combination
+- Animated and Comedy films also perform well
+- Franchise films outearn non-sequels
+- Ratings and votes correlate to box office success
+
+These insights equip Microsoft to make data-backed genre investment decisions for maximum profitability.
+
+
+
+## Conclusions
+
+Based on this analysis, Microsoft should:
+
+- Prioritize movies in the Adventure, Action, Sci-Fi genre combination
+- Strongly consider Animation and Comedy films
+- Develop sequels and franchise films
+- Market aggressively to drive positive ratings and votes
+
+Revisiting these findings annually will keep the recommendations relevant as new data emerges. Overall, this analysis provides a data-driven movie genre investment strategy.
+
+
+
+
+## Repository Structure
+
+Describe the structure of your repository and its contents, for example:
+
+```
+├── README.md                           <- The top-level README for reviewers of this project
+├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
+├── DS_Project_Presentation.pdf         <- PDF version of project presentation
+├── data                                <- Both sourced externally and generated from code
+└── images                              <- Both sourced externally and generated from code
+```
