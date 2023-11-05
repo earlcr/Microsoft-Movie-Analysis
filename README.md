@@ -45,6 +45,9 @@ Key preparation steps included:
 
 These choices focused on complete cases, maintained data integrity, enabled merging, and engineered features for additional insights.
 
+![Alt IMDB Logo](https://github.com/earlcr/Microsoft-Movie-Analysis/blob/template-mvp/images/imdb%20logo.png)
+
+
 ## Methods
 
 The analysis methodology focused on:
