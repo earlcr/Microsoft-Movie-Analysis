@@ -4,87 +4,86 @@
 
 ## Overview
 
-This project conducts an in-depth analysis of movie data from IMDb to uncover insights into which genres of films are most successful. Success is measured by examining domestic gross revenue, foreign gross revenue, average user ratings, and number of user votes for each movie in the dataset.
-
-The analysis aims to identify key patterns and relationships between movie genres and success metrics that can inform Microsoft's genre selection for their new movie studio. The goal is to leverage data-driven insights to maximize the revenue potential and profitability of Microsoft's upcoming slate of films.
-
-The key findings indicate that movies containing the genres Adventure, Action, and Sci-Fi consistently rank among the top for both domestic and foreign box office sales. Movies with the Adventure, Animation, and Comedy genre combination also perform well. Overall, the analysis suggests that Adventure is a crucial component across most high grossing genre combinations.
-
-### Repository Contents
-
-The repository contains the following:
-
--  imdb_data.ipynb - Jupyter notebook containing all data importing, preparation, exploratory analysis, visualization, and modeling code
--  data/ - This folder contains the 3 raw CSV data files downloaded from IMDb
--  images/ - All data visualization images, charts, and graphs generated from the analysis are saved here
--  Movie_Genre_Analysis_Report.pdf - A formal final report synthesizing the key findings and recommendations
--  README.md - The top level README providing an overview of the repository and project (this file)
+This project conducts an in-depth analysis of historical box office data to uncover patterns linking movie genres, ratings, votes, and revenues. The goal is providing Microsoft actionable insights as it enters the movie industry, guiding data-driven investments for maximizing financial returns. The analysis utilizes descriptive statistics and visualizations to reveal adventure, animation, action, franchises, and quality ratings strongly correlate with box office success.
 
 ## Business Problem
 
-Microsoft seeks to optimize its movie investment decisions as it builds up its new studio. The company needs data-backed insights on which types of films have achieved blockbuster success historically.
+As Microsoft launches its movie studio, data-driven analytics are required to inform multimillion-dollar investment decisions across projects and genres. Specifically, the analysis aims to answer:
 
-Key questions include:
+-  Which specific genres have consistently generated the highest average domestic and international gross revenues?
+-  How do user ratings on sites like IMDb correlate with overall financial performance for different movie genres?
+-  How many user votes on rating sites associate with box office success for different genres?
+-  Can these detailed genre insights guide Microsoft's project selection for the highest probability of box office success?
 
--  What genres have the highest revenue potential based on past box office performance?
--  How do user ratings and number of votes correlate with financial outcomes?
--  Can Microsoft use this knowledge to pick winning genres for its upcoming slate?
-- This analysis aims to uncover key patterns linking genres to box office results. These insights can guide Microsoft's multimillion dollar investments in its productions.
-
-***
+The goal is leveraging patterns linking genres to revenues to optimize Microsoft's genre selection strategy. This will maximize return on investment as the studio enters the industry.
 
 ## Data
 
-The data comes from IMDb and The Numbers box office database. It includes:
+The data includes three key datasets:
 
--  Movie metadata like title, genres, runtimes
--  User ratings and number of votes
--  Domestic and international box office gross revenue
+-  Movie box office gross revenue data for over 7,000 films, including variables like title, studio, domestic gross, and foreign gross.
+-  Movie metadata for over half a million titles, including original title, runtime, and genres.
+-  Movie ratings data with variables like average rating and number of votes.
 
-By combining data on genre, user engagement, and financials, the analysis can surface valuable insights.
-***
+Key preparation steps included:
+
+-  Dropping rows in gross dataset missing the studio name to enable analysis by studio.
+-  Imputing numeric columns like domestic gross with median values to fill in gaps.
+-  Ensuring data types were appropriate, converting foreign gross to numeric after removing commas.
+-  Merging all datasets using title and tconst as common unique keys.
+-  Adding a calculated total gross column by summing domestic and foreign gross.
+-  Creating a franchise flag column in merged dataset to enable franchise analysis.
+
+These choices focused on complete cases, maintained data integrity, enabled merging, and engineered features for additional insights.
 
 ## Methods
 
-The methodology focuses on:
+The analysis methodology focused on:
 
-- Data import, cleaning, merging, and preparation
-- Calculating summary statistics like mean revenue for top genres
-- Data visualization using Matplotlib and Seaborn
-- Ranking genres by financial performance
+-  Leveraging descriptive statistics including mean, median, and standard deviation to summarize revenues across genres.
+-  Employing visualizations such as bar charts, scatterplots, and histograms to uncover patterns and relationships in the data.
+-  Calculating averages, percentages, and thresholds for key metrics like user ratings.
+-  Using groupby operations and merging to connect data across datasets and analyze different cuts.
 
-This descriptive analysis elucidates trends and relationships in the data. The findings directly inform the genre recommendations.
+Key analysis plots included:
+
+-  Bar chart showing average gross revenue for top genres.
+-  Grouped bar chart of franchise vs non-franchise average gross revenue.
+-  Scatterplot relating ratings, votes, and high gross revenue movies.
+
+This approach extracted insights from the data without requiring predictive modeling or machine learning.
 
 ## Results
 
-Key results show:
+Key results and insights from the analysis included:
 
-- Adventure, Action, Sci-Fi is the top grossing genre combination
-- Animated and Comedy films also perform well
-- Franchise films outearn non-sequels
-- Ratings and votes correlate to box office success
+-  Movies in the Adventure, Animation, and Action genres had the highest average gross revenues, with each exceeding $950 million.
+-  On average, movies in a franchise earned over $800 million more than non-franchise films.
+-  Movies with user ratings exceeding 7.5 and votes over 100,000 associated strongly with high box office gross revenue above $500 million.
+-  The Sweetspot for high box office success was ratings between 7.5-8.5 and votes greater than 250,000.
 
-These insights equip Microsoft to make data-backed genre investment decisions for maximum profitability.
+These insights provide Microsoft with a data-backed investment thesis for maximizing returns. Limitations include incomplete revenue data and rapidly changing industry conditions affecting generalizability.
 
 
 
 ## Conclusions
 
-Based on this analysis, Microsoft should:
+Based on the analysis, the recommendations for Microsoft's movie investments are:
 
-- Prioritize movies in the Adventure, Action, Sci-Fi genre combination
-- Strongly consider Animation and Comedy films
-- Develop sequels and franchise films
-- Market aggressively to drive positive ratings and votes
+-  Focus on proven high-revenue genres like Adventure, Animation, and Action for core studio projects.
+-  Develop franchises with sequels and leverage existing intellectual property to build fan affinity.
+-  Prioritize releasing quality films with strong engagement to drive audience ratings and reviews.
 
-Revisiting these findings annually will keep the recommendations relevant as new data emerges. Overall, this analysis provides a data-driven movie genre investment strategy.
+Implementing these data-driven recommendations can significantly increase Microsoft's probability of box office success for its upcoming slate of original movies.
+
+The analysis provides a template for continually leveraging data to guide Microsoft's movie investments as the studio matures. But constant vigilance is required given the dynamic nature of the entertainment industry.
 
 
 
 
 ## Repository Structure
 
-Describe the structure of your repository and its contents, for example:
+Description of the structure of the repository and its contents:
 
 ```
 ├── README.md                           <- The top-level README for reviewers of this project
